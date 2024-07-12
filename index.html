@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Form</title>
+    <style>
+      body {
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .container {
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 700px;
+        padding: 20px;
+      }
+      .form {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        width: 100%;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        grid-column: span 1;
+      }
+
+      .form-group-full {
+        grid-column: span 3;
+      }
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input,
+      select,
+      textarea {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        height: 40px;
+      }
+
+      textarea {
+        resize: vertical;
+        height: 100px;
+      }
+
+      button {
+        grid-column: span 3;
+        padding: 10px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Register Form</h2>
+      <form class="form">
+        <div class="form-group">
+          <label for="name"> <span style="color: red">* </span> Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="mobile"><span style="color: red">* </span>Mobile</label>
+          <input type="text" id="mobile" name="mobile" required />
+        </div>
+        <div class="form-group">
+          <label for="password"
+            ><span style="color: red">* </span>Password</label
+          >
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-group">
+          <label for="email"> <span style="color: red">* </span>Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="emergency-contact">Emergency Contact</label>
+          <input type="text" id="emergency-contact" name="emergency-contact" />
+        </div>
+        <div class="form-group">
+          <label for="home-district">Home District</label>
+          <input type="text" id="home-district" name="home-district" />
+        </div>
+        <div class="form-group">
+          <label for="study-in">Study in</label>
+          <input type="text" id="study-in" name="study-in" />
+        </div>
+        <div class="form-group">
+          <label for="institute-name">Institute Name</label>
+          <input type="text" id="institute-name" name="institute-name" />
+        </div>
+        <div class="form-group">
+          <label for="technology">Technology</label>
+          <!-- <input type="text" id="technology" name="technology" /> -->
+          <select name="technology">
+            <option disabled="" value="" selected=""></option>
+
+            <option value="Construction">Construction</option>
+
+            <option value="Electronics">Electronics</option>
+
+            <option value="Computer">Computer</option>
+
+            <option value="AIDT">AIDT</option>
+
+            <option value="Electrical">Electrical</option>
+
+            <option value="Mechanical">Mechanical</option>
+
+            <option value="Civil">Civil</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="semester">Semester</label>
+          <input type="text" id="semester" name="semester" />
+        </div>
+        <div class="form-group">
+          <label for="shift">Shift</label>
+          <input type="text" id="shift" name="shift" />
+        </div>
+        <div class="form-group">
+          <label for="present-address">Present Address</label>
+          <input type="text" id="present-address" name="present-address" />
+        </div>
+        <div class="form-group form-group-full">
+          <label for="permanent-address">Permanent Address</label>
+          <input type="text" id="permanent-address" name="permanent-address" />
+        </div>
+        <div class="form-group form-group-full">
+          <label for="comment">Comment</label>
+          <textarea id="comment" name="comment"></textarea>
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </body>
+</html>
